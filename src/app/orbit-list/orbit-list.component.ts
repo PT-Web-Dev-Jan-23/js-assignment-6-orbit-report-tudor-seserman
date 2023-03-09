@@ -9,6 +9,8 @@ import { Satellite } from '../satellite';
 
 export class OrbitListComponent implements OnInit {
 
+	zebraColor:boolean=false;
+
   @Input() satellites: Satellite[];
   constructor() { }
 
@@ -25,6 +27,11 @@ export class OrbitListComponent implements OnInit {
 			}
 			return 0;
 		});
+	}
+
+	switchColor(){
+		this.zebraColor =!this.zebraColor
+		return this.zebraColor
 	}
 
 }
